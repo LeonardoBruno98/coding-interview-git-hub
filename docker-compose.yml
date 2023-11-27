@@ -1,0 +1,29 @@
+---
+# Default compose file for development and production.
+# Should be used directly in development.
+# Automatically loads `docker-compose.override.yml` if it exists.
+# No extra steps required.
+# Should be used together with `docker/docker-compose.prod.yml`
+# in production.
+
+version: "3.6"
+services:
+  db:
+    image: "postgres:15-alpine"
+    restart: unless-stopped
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - "5459:5432"
+    networks:
+      - backend
+    environment:
+      POSTGRES_DB: "wp-core"
+      POSTGRES_USER: "wp-usr"
+      POSTGRES_PASSWORD: "wp-pwd"
+
+volumes:
+  pgdata:
+
+networks:
+  backend:

@@ -1,0 +1,33 @@
+{
+  "name": "blog",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@formatjs/intl-localematcher": "^0.4.2",
+    "@sanity/client": "^6.4.12",
+    "negotiator": "^0.6.3",
+    "react": "latest",
+    "react-dom": "latest",
+    "next": "latest",
+    "next-sanity": "^5.5.4"
+  },
+  "devDependencies": {
+    "typescript": "latest",
+    "@types/react": "latest",
+    "@types/node": "latest",
+    "@types/react-dom": "latest",
+    "@types/negotiator": "^0.6.1",
+    "autoprefixer": "latest",
+    "postcss": "latest",
+    "tailwindcss": "latest",
+    "eslint": "latest",
+    "eslint-config-next": "latest",
+    "openapi-typescript-codegen": "^0.25.0"
+  }
+}
